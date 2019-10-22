@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>005 Select Element update HTML</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 1, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 1721872, "assessment_type": "coding-problem", "created": "2017-10-06T17:45:20Z", "prompt": {"language": "HTML", "instructions": "<p>Select the element 'output' and update the HTML to display JavaScript instead of Hello World</p><p>Use what you learning about selecting element by id and updating inner HTML</p>", "test_files": [{"content": "describe('div', function() {\r\n    var div = document.getElementById('output');\r\n\r\n    it('should exist', function() {\r\n        expect(div).toBeDefined();\r\n    });\r\n\r\n    it('should show \"JavaScript\" on the screen', function() {\r\n        var content = div.textContent.trim();\r\n        expect(content).toEqual('JavaScript');\r\n    });\r\n});", "key": 0.6563801801988165, "file_name": "evaluate.js"}], "eval": true, "initial_files": [{"content": "<div id=\"output\">Hello World</div>\n<script>\n\n</script>", "key": 0.21256446472908785, "file_name": "index.html"}], "solution_files": [{"content": "<div id=\"output\">Hello World</div>\n<script>\n    document.getElementById('output').innerHTML = \"JavaScript\"\n    \n</script>", "key": 0.9201702957839375, "file_name": "index.html"}]}, "correct_response": [""], "updated": "2017-10-06T17:50:33Z", "section": "", "question_plain": "", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

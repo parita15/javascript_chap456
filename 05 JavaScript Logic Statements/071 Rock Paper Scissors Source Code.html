@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>071 Rock Paper Scissors Source Code</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>&lt;html&gt;</p>
+
+<p>&lt;head&gt;<br>    &lt;title&gt;Complete JavaScript Course&lt;/title&gt;<br>    &lt;style&gt;</p>
+
+<p>    &lt;/style&gt;<br>&lt;/head&gt;</p>
+
+<p>&lt;body&gt;<br>    &lt;div id="output"&gt;Complete JavaScript Course &lt;/div&gt;<br>    &lt;script&gt;<br>        var output = document.getElementById('output');<br>        var player = prompt("Do you choose Rock Paper or Scissors?");<br>        var ps = player.charAt(0).toUpperCase();<br>        var win = false;<br>        var computer = Math.random();<br>        if (computer &lt; 0.34) {<br>            computer = "Rock";<br>        }<br>        else if (computer &lt; 0.67) {<br>            computer = "Paper";<br>        }<br>        else {<br>            computer = "Scissors";<br>        }<br>        var cs = computer.charAt(0).toUpperCase();<br>        console.log(computer);<br>        var html = "";<br>        if (cs == ps) {<br>            html += "Its a Tie";<br>        }<br>        else {<br>            if (ps == "R") {<br>                player = "Rock";<br>                if (cs == "S") {<br>                    win = true;<br>                }<br>            }<br>            else if (ps == "P") {<br>                player = "Paper";<br>                if (cs == "R") {<br>                    win = true;<br>                }<br>            }<br>            else {<br>                player = "Scissors";<br>                if (cs == "P") {<br>                    win = true;<br>                }<br>            }<br>            if (win) {<br>                html += " You Win";<br>            }<br>            else {<br>                html += " You Lost";<br>            }<br>        }<br>        output.innerHTML = "You      vs    Computer&lt;br&gt;" + player + " vs " + computer + "&lt;br&gt;" + html;<br>    &lt;/script&gt;<br>&lt;/body&gt;</p>
+
+<p>&lt;/html&gt;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

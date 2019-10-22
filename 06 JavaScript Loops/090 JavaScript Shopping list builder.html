@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>090 JavaScript Shopping list builder</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">    &lt;div id="output"&gt;&lt;/div&gt;
+    &lt;script&gt;
+        var output = document.getElementById("output");
+        var addItem;
+        var shoppingList = [];
+        var howManyTimes = prompt("How many items would you like to add?")
+        for(var x = 0; x&lt; howManyTimes; x++){
+            addItem = prompt("What do you want to add?");
+            if(addItem == "no"){break;}
+            shoppingList.push(addItem);
+        }
+        
+        for( myItem of shoppingList){
+            output.innerHTML += myItem + "&lt;br&gt;";
+        }
+    &lt;/script&gt;</pre>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

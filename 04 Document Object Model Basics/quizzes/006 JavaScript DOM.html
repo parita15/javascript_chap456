@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>006 JavaScript DOM</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 3, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 1670896, "assessment_type": "multiple-choice", "created": "2017-09-22T17:59:41Z", "prompt": {"question": "<p>What output will the following code produce</p>\n\n<pre class=\"prettyprint linenums\">   &lt;div id=\"output\"&gt;Complete JavaScript Course &lt;/div&gt;\n    &lt;script&gt;\n        var output = document.getElementById('output');\n        output.innerText = \"Hello &lt;br&gt; World\";\n    &lt;/script&gt;</pre>\n\n\n\n\n\n<p><br></p>", "relatedLectureIds": ["8029110"], "feedbacks": ["", "", ""], "answers": ["<p>Nothing it in the console</p>", "<p>Hello &lt;br&gt; World</p>", "<p>Hello World</p>"]}, "correct_response": ["b"], "updated": "2017-09-22T18:05:06Z", "section": "", "question_plain": "What output will the following code produce\n\n   &lt;div id=\"output\"&gt;Complete JavaScript Course &lt;/div&gt;\n    &lt;script&gt;\n        var output = document.getElementById('output');\n        output.innerText = \"Hello &lt;br&gt; World\";\n    &lt;/script&gt;", "related_lectures": [{"_class": "lecture", "id": 8029110, "title": "Manipulate innerHTML", "created": "2017-09-19T16:38:31Z", "asset": {"_class": "asset", "id": 9628762, "asset_type": "Video", "title": "4 -5 Manipulate innerHTML.mp4", "created": "2017-09-18T19:52:20Z"}, "object_index": 53, "url": "/javascript-training/learn/v4/t/lecture/8029110"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1670906, "assessment_type": "multiple-choice", "created": "2017-09-22T18:01:39Z", "prompt": {"question": "<p>What output will be seen within the browser page</p>\n\n<pre class=\"prettyprint linenums\">    &lt;div id=\"output\"&gt;Complete JavaScript Course &lt;/div&gt;\n    &lt;script&gt;\n        document.getElementById(output).innerHTML = \"Hello &lt;br&gt; World\";\n    &lt;/script&gt;</pre>\n\n\n\n<p><br></p>", "relatedLectureIds": ["8029110"], "feedbacks": ["There is an error with the code", "", ""], "answers": ["<p>Complete JavaScript Course</p>", "<p>Hello &lt;br&gt; World</p>", "<p>Hello World</p>"]}, "correct_response": ["a"], "updated": "2017-09-22T18:04:58Z", "section": "", "question_plain": "What output will be seen within the browser page\n\n    &lt;div id=\"output\"&gt;Complete JavaScript Course &lt;/div&gt;\n    &lt;script&gt;\n        document.getElementById(output).innerHTML = \"Hello &lt;br&gt; World\";\n    &lt;/script&gt;", "related_lectures": [{"_class": "lecture", "id": 8029110, "title": "Manipulate innerHTML", "created": "2017-09-19T16:38:31Z", "asset": {"_class": "asset", "id": 9628762, "asset_type": "Video", "title": "4 -5 Manipulate innerHTML.mp4", "created": "2017-09-18T19:52:20Z"}, "object_index": 53, "url": "/javascript-training/learn/v4/t/lecture/8029110"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1670916, "assessment_type": "multiple-choice", "created": "2017-09-22T18:04:23Z", "prompt": {"question": "<p>What will be seen in the input field from the below code</p>\n\n<pre class=\"prettyprint linenums\">    &lt;div id=\"output\"&gt;Hello World&lt;/div&gt;\n    &lt;input type=\"text\" id=\"val\" value=\"JavaScript\"&gt;\n    &lt;script&gt;\n        document.getElementById('val').value = document.getElementById('output').innerHTML;\n    &lt;/script&gt;</pre>\n\n<p><br></p>", "relatedLectureIds": ["8029132"], "feedbacks": ["", "", "", ""], "answers": ["<p>Hello World</p>", "<p>blank</p>", "<p>JavaScript</p>", "<p>Error in the code</p>"]}, "correct_response": ["a"], "updated": "2017-09-22T18:04:23Z", "section": "", "question_plain": "What will be seen in the input field from the below code\n\n    &lt;div id=\"output\"&gt;Hello World&lt;/div&gt;\n    &lt;input type=\"text\" id=\"val\" value=\"JavaScript\"&gt;\n    &lt;script&gt;\n        document.getElementById('val').value = document.getElementById('output').innerHTML;\n    &lt;/script&gt;", "related_lectures": [{"_class": "lecture", "id": 8029132, "title": "Prompt and DOM", "created": "2017-09-19T16:39:47Z", "asset": {"_class": "asset", "id": 9628718, "asset_type": "Video", "title": "4 -6 Prompt and DOM.mp4", "created": "2017-09-18T19:52:19Z"}, "object_index": 55, "url": "/javascript-training/learn/v4/t/lecture/8029132"}], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

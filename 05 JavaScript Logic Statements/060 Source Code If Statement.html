@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>060 Source Code If Statement</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">     var userNames = ["mike","john","larry"];
+        var userInput = prompt("what is your name?");
+        var output = document.getElementById("output");
+        var htmlOutput = "";
+        if(userNames.indexOf(userInput) &gt; -1) {
+             alert("hello");
+            htmlOutput = "welcome it was true";
+            var age = prompt("age");
+            htmlOutput += age &gt; 18 ? " you are over 18" : " you are under 18";
+        } else {
+            htmlOutput =  "denied was not true ";   
+        }
+        output.innerHTML = htmlOutput + ", "+ userInput; </pre>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

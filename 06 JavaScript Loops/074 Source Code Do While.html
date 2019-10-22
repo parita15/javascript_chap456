@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>074 Source Code Do While</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">        var output = document.getElementById("output");
+        var answer = prompt("How many times do you want me to loop?");
+        answer = Number(answer);
+        var x = 0;
+        do {
+            x++;
+            output.innerHTML += "value x = "+x+"&lt;br&gt;";
+        }
+        while (x &lt; answer);
+        output.innerHTML += "Final value of x = "+x+"&lt;br&gt;";
+        var output = document.getElementById("output");
+        var x = 0;
+        do {
+            if(x % 2 === 0){
+            output.innerHTML += "value x = "+x+"&lt;br&gt;";
+            }
+            x++;
+        }
+        while (x &lt; 30);
+        output.innerHTML += "Final value of x = "+x+"&lt;br&gt;";</pre>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>084 Source Code for Multiples</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">        // Loop to 1000
+        // Get all numbers multiples of 5 add them together 
+        // output the numbers being added together
+        // output total after the loop completes
+        var output = document.getElementById("output");
+        var total = 0 ;
+        for(var x = 0; x &lt;1000; x++){
+            if(x % 8 === 0 ){
+                total += x;
+                output.innerHTML += "value of x = "+x+" subTotal = "+total+"&lt;br&gt;";
+            }
+        }
+        output.innerHTML += "Total = "+total;</pre>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>078 Source Code</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <p>     <br></p>
+
+<pre class="prettyprint linenums">        var output = document.getElementById("output");
+        
+        for(var x = 0; x &lt;= 31; x++){
+            if(x % 2 !== 0){
+            output.innerHTML += "value of x is ="+x+"&lt;br&gt;";
+            }
+        }
+        var output = document.getElementById("output");
+        var caloriesBanana = 89;
+        var bananas = prompt("How many bananas do you want to eat?");
+        var total = 0;
+        var holder;
+        
+        for(var x = 1; x &lt;= bananas; x++){
+            total += caloriesBanana;
+            holder = x &gt; 1 ? "bananas another" : "banana"
+            output.innerHTML += "You ate "+x+" "+holder +"  "+caloriesBanana+" calories added to your total now at  "+total+"&lt;br&gt;";
+        }
+        output.innerHTML += "Your total calorie count is "+total;</pre>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>062 Source Code Else</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">        var myTime = prompt("what hour is it?");
+        
+        var output = document.getElementById("output");
+        
+        if(myTime &gt;= 8 &amp;&amp; myTime &lt; 12) {
+            output.innerHTML = "Wake up its morning";
+        } else if (myTime &gt;= 12 &amp;&amp; myTime &lt; 13) {
+            output.innerHTML = "go to Lunch";
+        } else if (myTime &gt;= 13 &amp;&amp; myTime &lt;= 16) {
+            output.innerHTML = "Go to work";
+        } else if (myTime &gt;16 &amp;&amp; myTime &lt; 20) {
+            output.innerHTML = "Dinner Time";
+        } else if (myTime &gt;= 22) {
+            output.innerHTML = "Time to go to sleep";
+        } else {
+           output.innerHTML = "You should be sleeping";
+        }</pre>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>086 Source Code for loops and arrays</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">        var output = document.getElementById("output");
+        var userNames = ["mike", "john", "larry"];
+        for (var x = 0; x &lt; userNames.length; x++) {
+            output.innerHTML += userNames[x] + "&lt;br&gt;";
+        }
+        for (var x = userNames.length - 1; x &gt;= 0; x--) {
+            output.innerHTML += userNames[x] + "&lt;br&gt;";
+        }
+        output.innerHTML += "For in&lt;br&gt;";
+        for (v of userNames) {
+            output.innerHTML += v + "&lt;br&gt;";
+        }
+        var x = 0;
+        while (userNames[x]) {
+            output.innerHTML += userNames[x] + "&lt;br&gt;";
+            x++;
+        }</pre>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

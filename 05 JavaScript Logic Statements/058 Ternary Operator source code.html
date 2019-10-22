@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>058 Ternary Operator source code</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">        var userNames = ["mike","john","larry"];
+        var checkUser = userNames.indexOf("mike") &gt; -1 ? true : false;
+        var output = document.getElementById("output");
+        
+        
+        var login = false;
+        var outputHolder = "";
+        var userOkay = login ? outputHolder = "true" : outputHolder = "false";
+        output.innerHTML = userOkay;
+        
+       // login ? alert("okay") : alert("denied");
+
+
+        var userNames = ["mike","john","larry"];
+        var userInput = prompt("what is your name?");
+        var output = document.getElementById("output");
+        output.innerHTML = userNames.indexOf(userInput) &gt; -1 ?  "welcome " : "denied";
+        output.innerHTML += ", "+ userInput;</pre>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

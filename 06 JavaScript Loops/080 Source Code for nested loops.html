@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>080 Source Code for nested loops</title>
+</head>
+<body>
+<div class="asset-container">
+    <div class="asset-container__padding article-view">
+        <div class="w3c-default">
+            <pre class="prettyprint linenums">        var output = document.getElementById("output");
+        
+        var html ="&lt;table&gt;";
+        
+        for(var row = 0; row &lt; 10; row++){
+            html += "&lt;tr&gt;";
+            for(var col = 0; col &lt; 5 ;col++){
+                html +="&lt;td&gt;Cell = "+((col+1)+(row*5))+"&lt;/td&gt;";
+            }
+            html += "&lt;/tr&gt;";
+        }
+        
+        html += "&lt;/table&gt;";
+        output.innerHTML = html;</pre>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
